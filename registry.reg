@@ -1,0 +1,13 @@
+
+REGEDIT4
+
+; Comentário explicativo
+[HKEY_CURRENT_USER\Software\Example]
+"ExampleString"="Hello, World!"
+"ExampleHex"=hex:01,02,03,04,05,ff
+"ExampleDword"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\AnotherExample]
+"AnotherString"="Another Example String"
+"AnotherHex"=hex:0a,0b,0c,0d,0e,0f
+"AnotherDword"=dword:0000000a
