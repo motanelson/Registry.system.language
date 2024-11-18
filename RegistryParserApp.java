@@ -2,20 +2,38 @@
 //java -cp .:antlr-4.9.2-complete.jar RegistryParserApp
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class RegistryParserApp {
+    static String source="";
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o conteúdo do arquivo de registro (ou pressione Enter para sair):");
+        try {
+            source="";
+            File myObj = new File("registry.reg");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                source=source+data+"\n";
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
 
-        while (true) {
-            System.out.print("> ");
-            String input = scanner.nextLine();
+       // Scanner scanner = new Scanner(System.in);
+       
+
+        
+            
+            String input = source;
 
             if (input.trim().isEmpty()) {
                 System.out.println("Encerrando o programa.");
-                break;
+                
             }
 
             try {
@@ -38,7 +56,6 @@ public class RegistryParserApp {
             }
         }
         
-        scanner.close();
-    }
+            
 }
 
