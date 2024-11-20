@@ -1,2 +1,3 @@
-# Registry.system.language
-language of registry
+# sub.function
+
+functions on functions
