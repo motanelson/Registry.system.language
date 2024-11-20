@@ -1,0 +1,8 @@
+c=func()
+c=func(funca(a,b))
+c=func(funca(a,b),b)
+c=func(funca(a,b),b,100)
+sub()
+sub(funca(a,b))
+sub(funca(a,b),b)
+sub(funca(a,b),b,100)
